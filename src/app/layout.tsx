@@ -7,6 +7,7 @@ import { auth } from "~/auth"
 import "./globals.css";
 import "./custom.css";
 import "./responsive.css";
+import "./premium-dark.css";
 
 export const metadata: Metadata = {
   title: "Booking BD — Cars, Flights, Hotels, Visa & Holidays",
@@ -31,7 +32,7 @@ export default async function RootLayout({
 }>) {
   const session = await auth()
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

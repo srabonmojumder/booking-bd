@@ -20,7 +20,7 @@ import ItemSorting from "@/components/hotels/hotelFilter/ItemSorting";
 import { getSelectedLocation } from "@/lib/actions/location-action";
 
 export const metadata: Metadata = {
-  title: `Activities | ${siteConfig.name}`,
+  title: `Attractions | ${siteConfig.name}`,
   description: `${siteConfig.description}`,
 };
 
@@ -51,7 +51,7 @@ const Activities = async ({ searchParams }: any) => {
         <div className="bg-[#00000066] h-full w-full absolute top-0 bottom-0"></div>
         <TransparentNavbar isBgWhite={false} />
         <FilterServiceGroup
-          label="Attraction"
+          label="Attractions"
           defaultValue="activities"
           selectedLocations={selectedLocations}
         />

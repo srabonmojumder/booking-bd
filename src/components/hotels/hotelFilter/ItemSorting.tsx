@@ -55,9 +55,9 @@ function ItemSorting({
   };
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between gap-3 flex-wrap pt-2 mt-2">
       <div className="text-gray-900">
-        <span className="font-bold text-[5]">
+        <span className="font-bold text-base sm:text-lg">
           {propertyCount || "No"} {label} found{" "}
         </span>
       </div>
@@ -65,7 +65,7 @@ function ItemSorting({
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="flex items-center gap-2 text-[5] font-bold text-gray-600"
+            className="flex items-center gap-2 text-base font-bold text-gray-600"
           >
             <SlidersHorizontal className="h-4 w-4" />
             {sortOptions.find(item => item.value == selectedSort)?.label || sortOptions[0].label}

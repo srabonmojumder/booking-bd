@@ -84,7 +84,7 @@ export default function Footer() {
             <div className="lg:col-span-5 md:space-y-8 space-y-3">
               <div className="space-y-4">
                 <Image
-                  src="/images/logo/light_logo-preview.png"
+                  src="/images/logo/dark_logo-preview.png"
                   alt="Site Logo"
                   width={150}
                   height={50}

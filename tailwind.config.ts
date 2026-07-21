@@ -11,6 +11,10 @@ export default {
     extend: {
       backgroundImage: {
         'about-us': "url('/images/bradcomed-banner.png')", // Replace with your image path
+        'premium-radial':
+          "radial-gradient(1200px 600px at 50% -10%, rgba(99,102,241,0.16), transparent 60%), radial-gradient(900px 500px at 100% 0%, rgba(147,51,234,0.12), transparent 55%)",
+        'premium-accent': "linear-gradient(135deg, #6366F1 0%, #9333EA 100%)",
+        'premium-gold': "linear-gradient(135deg, #E6C767 0%, #D4AF37 100%)",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -24,8 +28,12 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "#3264FF",
-          dark: "#0F2A4D",
+          DEFAULT: "#6366F1",
+          dark: "#4338CA",
+        },
+        gold: {
+          DEFAULT: "#D4AF37",
+          soft: "#E6C767",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -34,20 +42,25 @@ export default {
           DEFAULT: "#28A744",
           light: "#008234",
         },
+        // NOTE: "dark" is only ever used as a text color (text-dark*), so these
+        // are flipped to light tones for the premium-dark theme.
         dark: {
-          DEFAULT: "#1A1A1A",
-          secondary: "#183A6D",
-          deep: "#231C19",
-          gray: "#455873",
-          deepSlate: '#334155'
+          DEFAULT: "#E7E9F2",
+          secondary: "#AAB6D2",
+          deep: "#F2F3F8",
+          gray: "#9AA2B4",
+          deepSlate: "#B4BCCC",
         },
+        // "white.DEFAULT" stays #fff because it is also used as text-white.
+        // The *background* usages (bg-white) are darkened in premium-dark.css.
+        // The slate family below is background-only, so darkened here directly.
         white: {
           DEFAULT: "#fff",
-          lightSlate: "#F6F7FA",
-          softSlate: "#F1F2F4",
-          softGray: "#F2F5F9",
-          cloudy: "#ECF0F8",
-          frosted: "#DADFE6",
+          lightSlate: "#0F1119",
+          softSlate: "#12141D",
+          softGray: "#12141D",
+          cloudy: "#171A26",
+          frosted: "#1D2130",
           midGray: "#8793A7",
         },
         info: {

@@ -38,7 +38,8 @@ export function formatPrice(
 ) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: opts.currency ?? "AED",
+    currency: opts.currency ?? "BDT",
+    currencyDisplay: opts.currencyDisplay ?? "narrowSymbol",
     // notation: opts.notation ?? "compact",
     ...opts,
   }).format(Number(price));

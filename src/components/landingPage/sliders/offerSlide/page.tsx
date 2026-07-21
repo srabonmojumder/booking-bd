@@ -57,8 +57,7 @@ export default function OfferSlide() {
   return (
     <div className="w-full container mx-auto rounded-2xl mt-12">
       <Slider {...settings} className="offer-slider -mx-4 rounded-2xl">
-        {images?.length &&
-          images.map((item: CampaignTypes, index: number) => (
+        {images.map((item: CampaignTypes, index: number) => (
             <div key={index} className="px-2 md:h-full h-full">
               <Link href={item.link || "#"} className="h-full inline-block w-full">
                 <Card className="md:h-full h-full w-full border-2 border-red-600 overflow-hidden !bg-transparent !shadow-none !border-none relative">

@@ -9,15 +9,12 @@ import DefaultUmrahCard from "../cards/umrah/defaultUmrahCard/page";
 import DefaultVisaCard from "../cards/visa/defaultVisaCard/page";
 import { TransparentNavbar } from "../header/transparentNav/TransparentNav";
 import OfferSlide from "./sliders/offerSlide/page";
+import ClientOnly from "../ClientOnly";
 
 const LandingPage = () => {
   return (
     <section>
-      <header className="bg-white">
-        <div className="container mx-auto">
-          <TransparentNavbar isBgWhite={true} />{" "}
-        </div>
-      </header>
+      <TransparentNavbar isBgWhite={false} />
 
       <section>
         <DefaultBanner />
@@ -27,7 +24,9 @@ const LandingPage = () => {
         {/* carosol */}
         <section className="md:mt-[50px] mt-0 mb-[70px]">
           <div className="container mx-auto px-6 sm:px-0 overflow-hidden">
-            <OfferSlide />
+            <ClientOnly>
+              <OfferSlide />
+            </ClientOnly>
           </div>
         </section>
 
@@ -37,7 +36,9 @@ const LandingPage = () => {
             Recommended Attractions{" "}
           </h1>
           <div className="recommended-slick-area mx-auto">
-            <RecommendedCard />
+            <ClientOnly>
+              <RecommendedCard />
+            </ClientOnly>
           </div>
         </section>
 
@@ -48,7 +49,9 @@ const LandingPage = () => {
               Your Private Chauffeur for all your journeys
             </h1>
             <div className="private-chauffeur-slick-area mx-auto overflow-hidden">
-              <DefaultCarCard path={'chauffeur-with-car'}/>
+              <ClientOnly>
+                <DefaultCarCard path={'chauffeur-with-car'} />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -60,7 +63,9 @@ const LandingPage = () => {
               Top Destination for your Vacation
             </h1>
             <div className="top-destination-slick-area container mx-auto px-0 sm:px-3 ">
-              <DefaultTourCardSlider />
+              <ClientOnly>
+                <DefaultTourCardSlider />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -72,7 +77,9 @@ const LandingPage = () => {
               Best Hotels for Your Next Trip
             </h1>
             <div className="next-trip-slick-area mx-auto px-0 sm:px-3 ">
-              <DefaultHotelCard featured={true}/>
+              <ClientOnly>
+                <DefaultHotelCard featured={true} />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -85,7 +92,9 @@ const LandingPage = () => {
               Fleets for Rentals
             </h1>
             <div className="rental-fleets-slick-area mx-auto px-0 sm:px-3 ">
-              <RentalCarCard cardItemNumber={3} />
+              <ClientOnly>
+                <RentalCarCard cardItemNumber={3} />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -97,7 +106,9 @@ const LandingPage = () => {
               Your Private Chauffeur for all your journeys
             </h1>
             <div className="private-chauffeur-slick-area mx-auto px-2 sm:px-3 overflow-hidden">
-              <DefaultCarCard path={'chauffeur'} />
+              <ClientOnly>
+                <DefaultCarCard path={'chauffeur'} />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -109,7 +120,9 @@ const LandingPage = () => {
               Visa Services
             </h1>
             <div className="mx-auto px-0 sm:px-3 ">
-              <DefaultVisaCard />
+              <ClientOnly>
+                <DefaultVisaCard />
+              </ClientOnly>
             </div>
           </section>
         </div>
@@ -121,12 +134,14 @@ const LandingPage = () => {
               Umrah Packages
             </h1>
             <div className="umrah-slick-area mx-auto px-0 sm:px-3 ">
-              <DefaultUmrahCard />
+              <ClientOnly>
+                <DefaultUmrahCard />
+              </ClientOnly>
             </div>
           </section>
         </div>
 
-        {/* Visa card section  */}
+        {/* Brand strip */}
         <div className="w-full bg-white-lightSlate">
           <section className="container mx-auto pb-10 sm:pb-[80px] pt-10 sm:pt-[100px] px-3 sm:px-0">
             <h1 className="font-medium md:text-[28px] text-[20px] leading-7 md:mb-10 mb-3 text-center">
@@ -134,7 +149,9 @@ const LandingPage = () => {
               <span className="font-semibold">100+</span> flights
             </h1>
             <div className="mx-auto px-0 sm:px-3 ">
-              <Brands />
+              <ClientOnly>
+                <Brands />
+              </ClientOnly>
             </div>
           </section>
         </div>

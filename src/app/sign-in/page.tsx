@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Eye, EyeOff, Loader2, LockKeyhole, Mail } from "lucide-react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -82,7 +83,7 @@ export default function SignInForm() {
   return (
     <>
       <div className="relative">
-        <TransparentNavbar isBgWhite={true} />
+        <TransparentNavbar isBgWhite={false} />
       </div>
       <div className="bg-about-us  ">
         {/* <div className="bg-[#00000066] h-full w-full absolute top-0 bottom-0"></div> */}
@@ -90,10 +91,19 @@ export default function SignInForm() {
           <div className="bg-[#00000066] h-full w-full absolute top-[74px] bottom-0"></div>
           <Card className="w-full max-w-lg p-6 bg-white shadow-lg rounded-lg relative">
             <div className="mb-8">
-              <div className="mb-14 ">{icons.logo}</div>
+              <div className="mb-10">
+                <Image
+                  src="/images/logo/dark_logo-preview.png"
+                  alt="Booking BD"
+                  width={160}
+                  height={48}
+                  priority
+                  className="object-contain"
+                />
+              </div>
               <h1 className="text-2xl font-bold text-dark mb-2">Sign In</h1>
-              <p className="text-gray-s600">
-                Create an account to easily use Booking BD services.
+              <p className="text-gray-400">
+                Sign in to continue with your Booking BD account.
               </p>
             </div>
 
