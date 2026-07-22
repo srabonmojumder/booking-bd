@@ -33,27 +33,34 @@
   background-color: #1a1d2a !important;
 }
 
-/* ---- Text: lift near-black greys to readable light tones ----------------- */
+/* ---- Text: lift near-black greys to readable light tones (AA contrast) ---- */
 .text-black,
 .text-gray-900,
 .text-gray-800,
 .text-slate-900,
 .text-slate-800,
 .text-neutral-900,
+.text-zinc-900,
 .text-\[\#1A1A1A\],
 .text-\[\#1a1a1a\] {
-  color: #e7e9f2 !important;
+  color: #f3f5fa !important;
 }
 
 .text-gray-700,
 .text-gray-600,
 .text-gray-500,
+.text-gray-400,
 .text-slate-700,
 .text-slate-600,
 .text-slate-500,
+.text-slate-400,
 .text-neutral-700,
-.text-neutral-600 {
-  color: #9aa2b4 !important;
+.text-neutral-600,
+.text-neutral-500,
+.text-zinc-600,
+.text-zinc-500,
+.text-muted-foreground {
+  color: #bcc3d2 !important;
 }
 
 /* price / accent text that was a deep navy — lift to a readable indigo */
@@ -101,6 +108,35 @@ input,
 textarea,
 select {
   color-scheme: dark;
+}
+
+/* Readable placeholders (previously near-invisible) */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(230, 233, 242, 0.5) !important;
+}
+
+/* Inputs: clearer border + focus ring for accessibility */
+input,
+textarea,
+select {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: hsl(var(--ring)) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* ---- Micro-interactions -------------------------------------------------- */
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #9333ea);
+  border-radius: 10px;
 }
 
 /* ---- Premium utility classes --------------------------------------------- */
